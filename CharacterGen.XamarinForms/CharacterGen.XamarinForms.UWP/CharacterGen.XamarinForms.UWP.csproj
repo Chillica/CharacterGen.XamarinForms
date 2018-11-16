@@ -144,9 +144,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.912540" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5"/>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\CharacterGen.SharedLogic\CharacterGen.SharedLogic.csproj">
+      <Project>{957144e5-cd9e-4227-b3fc-8f94461c0d38}</Project>
+      <Name>CharacterGen.SharedLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CharacterGen.XamarinForms\CharacterGen.XamarinForms.csproj">
       <Project>{6E5234F5-87F8-4FB9-A37D-B03FFCED5902}</Project>
       <Name>CharacterGen.XamarinForms</Name>
