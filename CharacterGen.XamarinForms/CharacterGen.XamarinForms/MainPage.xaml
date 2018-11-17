@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:CharacterGen.XamarinForms"
              xmlns:vm="clr-namespace:CharacterGen.SharedLogic;assembly=CharacterGen.SharedLogic"
              x:Class="CharacterGen.XamarinForms.MainPage">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
     <StackLayout HorizontalOptions="CenterAndExpand"
                  VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
