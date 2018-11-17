@@ -7,7 +7,7 @@ namespace CharacterGen.DataTypes
 {
     public class Character : INotifyPropertyChanged, IDataErrorInfo
     {
-            public int CharacterID { get; set; }
+            public int Id { get; set; }
             private string lastName, firstName, height, weight;
             private DateTime born;
 

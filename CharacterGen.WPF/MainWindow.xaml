@@ -11,6 +11,28 @@
         <vm:MainViewModel />
     </Window.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
         <TextBlock Text="{Binding Message}" />
+        <StackPanel Grid.Row="1"
+                    Margin="5">
+            <TextBlock Text="First Name" />
+            <TextBox Text="{Binding FirstName}" />
+            <TextBlock Text="Last Name" />
+            <TextBox Text="{Binding LastName}" />
+            <Button Content="Submit" Command="{Binding AddCharacter}" />
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <ListBox ItemsSource="{Binding Characters, NotifyOnSourceUpdated=True}"
+                                 ScrollViewer.CanContentScroll="True"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                 DisplayMemberPath="Name"
+                                 SelectedIndex="0"
+                                 Margin="5">
+            </ListBox>
+        </StackPanel>
     </Grid>
 </Window>

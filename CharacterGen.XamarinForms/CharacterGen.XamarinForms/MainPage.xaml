@@ -4,15 +4,32 @@
              xmlns:local="clr-namespace:CharacterGen.XamarinForms"
              xmlns:vm="clr-namespace:CharacterGen.SharedLogic;assembly=CharacterGen.SharedLogic"
              x:Class="CharacterGen.XamarinForms.MainPage">
-    
-    <ContentPage.BindingContext>
-        <vm:MainViewModel />
-    </ContentPage.BindingContext>
-    <StackLayout>
+    <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand">
         <!-- Place new controls here -->
         <Label Text="{Binding Message}" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
+        <Entry HeightRequest="50"
+               Placeholder="First Name"
+               Text="{Binding FirstName}" />
+        <Entry HeightRequest="50"
+               Placeholder="Last Name"
+               Text="{Binding LastName}" />
+        <Button Command="{Binding AddCharacter}"
+                Text="Add Card" />
+        <ListView ItemsSource="{Binding Characters}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--<TextCell Text="{Binding FirstName}"
+                              Detail="{Binding Hint}" />-->
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="{Binding FirstName}" />
+                        <Label Text="{Binding LastName}" />
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 
 </ContentPage>

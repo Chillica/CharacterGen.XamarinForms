@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CharacterGen.DataStorage\CharacterGen.DataStorage.csproj" />
     <ProjectReference Include="..\CharacterGen.DataTypes\CharacterGen.DataTypes.csproj" />
   </ItemGroup>
 

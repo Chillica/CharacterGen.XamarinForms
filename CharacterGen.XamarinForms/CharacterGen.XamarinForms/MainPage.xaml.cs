@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CharacterGen.SharedLogic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,10 @@ namespace CharacterGen.XamarinForms
         public MainPage()
         {
             InitializeComponent();
+        }
+        public MainPage(MainViewModel vm) : this()
+        {
+            BindingContext = vm;
         }
     }
 }

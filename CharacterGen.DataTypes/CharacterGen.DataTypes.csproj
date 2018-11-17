@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="IDataStructure.cs~RF236cdce.TMP" />
+  </ItemGroup>
+
 </Project>
